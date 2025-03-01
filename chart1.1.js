@@ -5,12 +5,12 @@ generateData("2", 0, 10, 0.5);
 new Chart("chart1.1", {
   type: "line",
   data: {
-    labels: xValues,
+    labels: xValues1p1,
     datasets: [{
       fill: false,
       pointRadius: 1,
       borderColor: "rgba(255,0,0,1)",
-      data: yValues
+      data: yValues1p1
     }]
   },
   options: {

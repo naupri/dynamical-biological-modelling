@@ -41,7 +41,7 @@ function generateData(expression, start, stop, step = 1) {
 	let xValues = [];
 	let yValues = [];
   for (let x = start; x <= stop; x += step) {
-    yValues.push(eval(expression));
+    yValues.push(eval(expression.replace(/x/g, x)));
     xValues.push(x);
     return [xValues, yValue];
   }

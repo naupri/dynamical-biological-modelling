@@ -1,8 +1,8 @@
 const xValues = [];
 const yValues = [];
-generateData("2", 0, 10, 0.5);
+generateData("2*x", 0, 10, 0.5);
 
-new Chart("chart1.1", {
+new Chart("chart1.2", {
   type: "line",
   data: {
     labels: xValues,
@@ -18,7 +18,7 @@ new Chart("chart1.1", {
     x: {
       title: {
         display: true,
-        text: 'value of P'
+        text: 'value of t'
       },
       min: 0,
       max: 10
@@ -26,7 +26,7 @@ new Chart("chart1.1", {
     y: {
       title: {
         display: true,
-        text: 'dP/dt'
+        text: 'p(t)'
       },
       min: 0,
       max: 10
@@ -39,7 +39,7 @@ new Chart("chart1.1", {
 
 function generateData(value, i1, i2, step = 1) {
   for (let x = i1; x <= i2; x += step) {
-    yValues.push(2);
+    yValues.push(2*x);
     xValues.push(x);
   }
 }

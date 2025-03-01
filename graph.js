@@ -1,9 +1,7 @@
 function graph(expression, graphname) {
-    let xValues = [];
-    let yValues = [];
-    xValues, yValues = generateData(expression, 0, 10, 0.5);
+    let [xValues, yValues] = generateData(expression, 0, 10, 0.5);
 
-    new Chart(graphname, {
+    new Chart(document.getElementById(graphname), {
         type: "line",
         data: {
           labels: xValues,
@@ -45,7 +43,7 @@ function generateData(expression, start, stop, step = 1) {
   for (let x = start; x <= stop; x += step) {
     yValues.push(eval(expression));
     xValues.push(x);
-    return xValues, yValues;
+    return [xValues, yValue];
   }
 }
 

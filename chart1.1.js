@@ -1,5 +1,5 @@
-const xValues = [];
-const yValues = [];
+let xValues = [];
+let yValues = [];
 generateData("2", 0, 10, 0.5);
 
 new Chart("chart1.1", {
@@ -38,6 +38,8 @@ new Chart("chart1.1", {
 });
 
 function generateData(expression, start, stop, step = 1) {
+	xValues = [];
+	yValues = [];
   for (let x = start; x <= stop; x += step) {
     yValues.push(eval(expression));
     xValues.push(x);

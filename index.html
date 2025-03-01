@@ -7,10 +7,12 @@
 
 <h1>Interactive companion to the course reader "Dynamical Biological Modelling"</h1>
 <p>Some graphs with sliders coming soon.</p>
-<p>Also, I'm testing if Python with pyscript works for the GitHub Pages</p>
-<pyscript> 
-    for i in range(5):
-        print(i)
-</pyscript>
+<p>Also, I think I'm gonna have to do this in JavaScript, oops. Let's try:</p>
+<p id="experiment"></p>
+<script>
+    for (let i = 0; i<5; i++){
+        document.getElementById("experiment").innerText = i;
+    }
+</script>
 </body>
 </html> 

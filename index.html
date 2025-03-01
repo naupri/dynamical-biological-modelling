@@ -5,7 +5,7 @@
 <script id="MathJax-script" async
         src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
   </script>
-<script id="Chart-script" async
+<script id="Chart-script"
        src="https://cdnjs.com/libraries/Chart.js">
    </script> 
 </head>
@@ -54,7 +54,7 @@ new Chart("myChart", {
 
 function generateData(value, i1, i2, step = 1) {
   for (let x = i1; x <= i2; x += step) {
-    yValues.push(eval(value));
+    yValues.push(x*2+7);
     xValues.push(x);
   }
 }

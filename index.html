@@ -17,6 +17,12 @@
     document.getElementById("experiment").innerHTML = "Hello, World!"
 </script>
 
+<script type="module">
+    import { graph } from './graph.js';
+    graph("x", "testgraph");
+</script>
+<canvas id="testgraph" style="width:500px;height:500px"></canvas>
+
 <div class="flex-container">
     <div class="flex-child left">
         <p>\(\frac{\,dP}{\,dt}=k\)</p>

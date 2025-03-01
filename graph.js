@@ -49,4 +49,4 @@ function generateData(expression, start, stop, step = 1) {
   }
 }
 
-export { graph };
+window.graph = graph;

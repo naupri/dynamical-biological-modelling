@@ -6,6 +6,7 @@
         src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
   </script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="graph.js"></script>
 </head>
 <body>
 
@@ -17,8 +18,7 @@
     document.getElementById("experiment").innerHTML = "Hello, World!"
 </script>
 
-<script type="module">
-    import { graph } from './graph.js';
+<script>
     graph("x", "testgraph");
 </script>
 <canvas id="testgraph" style="max-width:500px;max-height:500px"></canvas>

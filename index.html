@@ -3,8 +3,11 @@
 <head>
 <title>Page Title</title>
 <script id="MathJax-script" async
-          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
   </script>
+<script id="Chart-script" async
+       src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+   </script> 
 </head>
 <body>
 
@@ -12,9 +15,37 @@
 <p>Some graphs with sliders coming soon.</p>
 <p>Also, I think I'm gonna have to do this in JavaScript, oops. Let's try:</p>
 <p>$$\frac{\,dP}{\,dt}=k$$</p>
+<canvas id="myChart" style="width:100%;max-width:700px"></canvas> 
+<script>
+const xValues = [];
+const yValues = [];
+generateData("x * 2 + 7", 0, 10, 0.5);
+
+new Chart("myChart", {
+  type: "line",
+  data: {
+    labels: xValues,
+    datasets: [{
+      fill: false,
+      pointRadius: 1,
+      borderColor: "rgba(255,0,0,0.5)",
+      data: yValues
+    }]
+  },
+  options: {...}
+});
+
+function generateData(value, i1, i2, step = 1) {
+  for (let x = i1; x <= i2; x += step) {
+    yValues.push(eval(value));
+    xValues.push(x);
+  }
+}
+</script>
 <p id="experiment"></p>
 <script>
     document.getElementById("experiment").innerHTML = "Hello, World!"
 </script>
+
 </body>
 </html> 

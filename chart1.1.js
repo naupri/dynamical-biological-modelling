@@ -19,17 +19,21 @@ new Chart("myChart", {
       title: {
         display: true,
         text: 'value of P'
-      }
+      },
+      min: 0,
+      max: 10
     },
     y: {
       title: {
         display: true,
         text: 'dP/dt'
-      }
+      },
+      min: 0,
+      max: 10
     }
   },
   responsive: true,
-  maintainAspectRatio: false
+  maintainAspectRatio: true
 }
 });
 

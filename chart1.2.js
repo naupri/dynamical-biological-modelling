@@ -37,9 +37,9 @@ new Chart("chart1.2", {
 }
 });
 
-function generateData(value, i1, i2, step = 1) {
-  for (let x = i1; x <= i2; x += step) {
-    yValues.push(2*x);
-    xValues.push(x);
+function generateData(expression, start, stop, step = 1) {
+    for (let x = start; x <= stop; x += step) {
+      yValues.push(eval(expression));
+      xValues.push(x);
+    }
   }
-}

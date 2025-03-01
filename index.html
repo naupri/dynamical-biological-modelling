@@ -33,23 +33,23 @@ new Chart("myChart", {
     }]
   },
   options: {
-    scales: {
-      x: {
-        title: {
-          display: true,
-          text: 'X Axis'
-        }
-      },
-      y: {
-        title: {
-          display: true,
-          text: 'Y Axis'
-        }
+  scales: {
+    x: {
+      title: {
+        display: true,
+        text: 'X Axis'
       }
     },
-    responsive: true,
-    maintainAspectRatio: false
-  }
+    y: {
+      title: {
+        display: true,
+        text: 'Y Axis'
+      }
+    }
+  },
+  responsive: true,
+  maintainAspectRatio: false
+}
 });
 
 function generateData(value, i1, i2, step = 1) {
